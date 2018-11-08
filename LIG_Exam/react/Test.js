@@ -1,0 +1,1 @@
+document.getElementById("myH").innerHTML = "JavaScript Comments";

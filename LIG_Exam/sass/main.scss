@@ -1,0 +1,79 @@
+$font-logo: Lucida, cursive;
+
+$main-font:"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ', Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+h1{
+    
+    font-family: $font-logo;
+    text-align: center;
+    cursor: pointer;
+}
+.image-carousel {
+  
+    height: 418px;
+    overflow: hidden;
+    position: relative;
+    
+    
+
+    .inner {
+        display: flex;
+        position: absolute;
+        left: 0;
+        
+    }
+
+    .bubbles {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 5px;
+
+        .bubble {
+            margin: 8px;
+            background-color: black;
+            border-radius: 100000px;
+            width: 13px;
+            height: 13px;
+            display: inline-block;
+            opacity: 0.50;
+            transition: opacity 0.1s linear;
+            cursor: pointer;
+            
+
+            &:hover {
+                opacity: 0.65;
+            }
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .next::after, .prev::after {
+        content: '>';
+        color: white;
+        position: absolute;
+        top: 40%;
+        left: 85%;
+        font-size: 50px;
+        padding: 0 0.2em;
+        cursor: pointer;
+        transition: opacity 0.1s linear;
+        font-family: arial narrow;
+        box-sizing: border-box;
+    }
+
+    .next:hover::after, .prev:hover::after {
+        opacity: 1;
+    }
+
+    .prev::after {
+        content: '<';
+        left: 15%;
+    }
+}
